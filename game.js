@@ -27,7 +27,7 @@ var started = false;
 var level = 0;
 
 //Key Press to Start
-$(document).('keypress touchstart',function () {
+$(document).on("keypress touchstart",function () {
   if (!started) {
     $("#level-title").text("Level " + level);
     nextSequence();
