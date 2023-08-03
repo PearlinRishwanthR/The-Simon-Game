@@ -19,7 +19,6 @@ $(document).on('keypress touchstart',function () {
 });
 
 //button click
-
 $(".btn").click(function () {
   var userChoosenColour = this.id;
   userClickedPattern.push(userChoosenColour);
@@ -47,8 +46,7 @@ function nextSequence() {
   playSound(randomChosenColour);
 }
 
-//Play Sound
-
+//play Sound
 function playSound(name) {
   var audio = new Audio("sounds/" + name + ".mp3");
   audio.play();
@@ -80,7 +78,7 @@ function checkAnswer(currentLevel) {
     setTimeout(function () {
       $("body").removeClass("game-over");
     }, 200);
-    $("#level-title").text("Game Over, Press Any Key to Restart");
+    $("#level-title").text("Game Over, Press Any Keyboard Key to Restart");
 
     startOver();
   }
